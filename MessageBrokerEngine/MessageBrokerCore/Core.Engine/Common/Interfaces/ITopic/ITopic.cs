@@ -7,40 +7,30 @@ namespace MessageBrokerEngine.MessageBrokerCore.Core.Engine.Common.Interfaces
 
     public interface ITopic : IDisposable
     {
-        Guid Id { get; }
-        string Name { get; }
-        string Description { get; }
-        string TRoute { get; }
-        DateTime CreationDate { get; }
-        string Owner { get; }
-        int Partitions { get; }
-        int ReplicationFactor { get; }
-        TopicStatus Status { get; }
-        TimeSpan RetentionPeriod { get; }
-        long MessageCount { get; }
-        int SubscriptionCount { get; }
-
-        bool IsAuthorizedProducer(string producerId);
-        bool IsAuthorizedConsumer(string consumerId);
-
-        void Subscribe(string subscriberId);
-        void Unsubscribe(string subscriberId);
+        Guid IdentificationId { get; }
+        string TopicName { get; }
+        string TopicDescription { get; }
+        Guid TopicRoute { get; }
+        DateTime TopicCreationDate { get; }
+        string TopicOwner { get; }
+        int TopicPartitions { get; }
+        int TopicReplicationFactor { get; }
+        TopicStatus TopicStatus { get; }
+        TimeSpan TopicRetentionPeriod { get; }
+        long TopicMessageCount { get; }
+        int TopicSubscriptionCount { get; }
+        bool IsAuthorizedProducer(Guid producerId);
+        bool IsAuthorizedConsumer(Guid consumerId);
+        Task Subscribe(Guid subscriberId);
+        Task Unsubscribe(Guid subscriberId);
         IEnumerable<string> GetSubscribers();
-
-        IDictionary<string, string> Metadata { get; }
-        void AddMetadata(string key, string value);
-        string GetMetadata(string key);
-
         void Configure(string name, string description, string tRoute, int partitions, int replicationFactor, TimeSpan retentionPeriod, string owner);
-
         Task StartAsync();
         Task StopAsync();
-
         event EventHandler<EventArgs> OnStart;
         event EventHandler<EventArgs> OnStop;
         event EventHandler<ErrorEventArgs> OnError;
     }
-
     public enum TopicStatus
     {
         Active,
