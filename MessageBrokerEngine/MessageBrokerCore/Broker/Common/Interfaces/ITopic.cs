@@ -1,9 +1,9 @@
-namespace MessageBrokerEngine.MessageBrokerCore.Core.Engine.Common.Interfaces
+namespace MessageBrokerEngine.MessageBrokerCore.Engine.Common.Interfaces
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using MessageBrokerEngine.MessageBrokerCore.Core.Engine.Common.Events;
+    using MessageBrokerEngine.MessageBrokerCore.Broker.Common.Interfaces;
     public interface ITopic : IDisposable
     {
         IEnumerable<IMessage> Messages { get; }

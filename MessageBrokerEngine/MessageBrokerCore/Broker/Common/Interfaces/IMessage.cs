@@ -1,4 +1,4 @@
-namespace MessageBrokerEngine.MessageBrokerCore.Core.Engine.Common.Interfaces{
+namespace MessageBrokerEngine.MessageBrokerCore.Broker.Common.Interfaces{
     public interface IMessage
     {
         Guid Id { get; set; }

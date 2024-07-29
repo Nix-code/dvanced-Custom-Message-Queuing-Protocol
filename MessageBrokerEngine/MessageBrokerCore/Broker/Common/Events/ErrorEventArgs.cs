@@ -1,4 +1,4 @@
-namespace MessageBrokerEngine.MessageBrokerCore.Core.Engine.Common.Events
+namespace MessageBrokerEngine.MessageBrokerCore.Broker.Engine.Common.Events
 {
     using System;
 
