@@ -1,0 +1,15 @@
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/bin/Debug/net8.0/MessageBrokerCore
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/bin/Debug/net8.0/MessageBrokerCore.deps.json
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/bin/Debug/net8.0/MessageBrokerCore.runtimeconfig.json
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/bin/Debug/net8.0/MessageBrokerCore.dll
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/bin/Debug/net8.0/MessageBrokerCore.pdb
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.GeneratedMSBuildEditorConfig.editorconfig
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.AssemblyInfoInputs.cache
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.AssemblyInfo.cs
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.csproj.CoreCompileInputs.cache
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.sourcelink.json
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.dll
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/refint/MessageBrokerCore.dll
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.pdb
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/MessageBrokerCore.genruntimeconfig.cache
+/home/jobleet/Desktop/MessageBroker/MessageBrokerEngine/MessageBrokerCore/obj/Debug/net8.0/ref/MessageBrokerCore.dll
