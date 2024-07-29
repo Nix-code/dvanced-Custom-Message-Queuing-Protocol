@@ -19,22 +19,49 @@ namespace MessageBrokerEngine.MessageBrokerCore.Core.Engine.Common.Interfaces
         TimeSpan TopicRetentionPeriod { get; }
         long TopicMessageCount { get; }
         int TopicSubscriptionCount { get; }
+        int TopicPriority {get;}
+        TopicType TopicType {get;}
+        bool EnableCompression {get;}
+        string? EncryptionKey{get;}
+        IEnumerable<string>? Tags { get; }
+        IEnumerable<string> GetSubscribers();
         bool IsAuthorizedProducer(Guid producerId);
         bool IsAuthorizedConsumer(Guid consumerId);
         Task Subscribe(Guid subscriberId);
         Task Unsubscribe(Guid subscriberId);
-        IEnumerable<string> GetSubscribers();
-        void Configure(string name, string description, string tRoute, int partitions, int replicationFactor, TimeSpan retentionPeriod, string owner);
         Task StartAsync();
         Task StopAsync();
         event EventHandler<EventArgs> OnStart;
         event EventHandler<EventArgs> OnStop;
         event EventHandler<ErrorEventArgs> OnError;
+
+        void Configure(
+            string topicName,
+            string topicDescription,
+            string topicRoute,
+            int topicPartitions,
+            int topicReplicationFactor,
+            TimeSpan topicRetentionPeriod,
+            string topicOwner,
+            int topicPriority = 0, 
+            bool enableCompression = false, 
+            string encryptionKey = null, 
+            TopicType topicType = TopicType.Standard,
+            string[] tags = null 
+        );
+       
     }
     public enum TopicStatus
     {
         Active,
         Inactive,
         Deleted
+    }
+    public enum TopicType
+    {
+        Standard,
+        Transactional,
+        Priority,
+        Delayed
     }
 }
