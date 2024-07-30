@@ -2,6 +2,8 @@
 
 This project involves the design and implementation of a custom message broker system from scratch, based on a distributed message queuing protocol. The system aims to facilitate efficient, reliable, and scalable communication between services in a distributed environment. Key features include topic-based publish/subscribe messaging, robust message routing, durable message storage, and high availability through clustering. This project will also incorporate security measures such as authentication, authorization, and encryption, along with comprehensive monitoring and management tools to ensure optimal performance and reliability.
 
+## Initial Design 
+![Message Broker Design](docs/high-level-design.png)
 
 ### Key Features
 
