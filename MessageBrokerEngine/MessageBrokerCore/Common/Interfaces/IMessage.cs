@@ -3,8 +3,6 @@ namespace MessageBrokerEngine.MessageBrokerCore.Common.Interfaces{
     {
         Guid Id { get; set; }
         byte[] Payload { get; set; }
-        Guid Route { get; set; }
-        Guid ProducerId { get; set; }
         DateTime TimeStamp { get; set; }
         byte[] OriginalMessageData { get; set; }
         string? EncryptionKey { get; set; }
