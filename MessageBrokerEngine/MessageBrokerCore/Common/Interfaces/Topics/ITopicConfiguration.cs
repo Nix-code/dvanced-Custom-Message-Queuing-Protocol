@@ -1,7 +1,10 @@
+using MessageBrokerEngine.MessageBrokerCore.Models;
+
 namespace MessageBrokerEngine.MessageBrokerCore.Common.Interfaces.Topics {
 
     public class TopicConfiguration{
 
+        public IEnumerable<MessageModel> Messages { get; set; }
         public string? TopicDescription { get; set; }
         public string? TopicRoute { get; set; }
         public string? TopicOwner { get; set; }

@@ -2,11 +2,9 @@ namespace MessageBrokerEngine.MessageBrokerCore.Common.Interfaces.Topics
 {
     using System;
     using System.Collections.Generic;
-    using MessageBrokerEngine.MessageBrokerCore.Models;
 
     public interface ITopic : IDisposable
     {
-        IEnumerable<MessageModel> Messages { get; }
         Guid IdentificationId { get; }
         string TopicName { get; }
         DateTime TopicCreationDate { get; }
