@@ -5,7 +5,6 @@
 // Broker Instances manage Queues and ensure efficient message delivery.
 // Communication between all components is handled using TCP, with routing algorithms ensuring efficient message delivery.
 
-using System.Collections;
 using MessageBrokerEngine.MessageBrokerCore.Models;
 
 namespace MessageBrokerEngine.MessageBrokerCore.Broker
@@ -14,12 +13,10 @@ namespace MessageBrokerEngine.MessageBrokerCore.Broker
     {
         Task CreateTopicAsync(string topicName, TopicModel topic);
         IEnumerable<TopicModel> ListTopics();
-        IEnumerable<Queue> ListQueues(string topicName);
 
-        void PublishMessageInternal(string topicName, MessageModel message);
-        void AddSubscriberInternal(string topicName, string subscriberId);
-        void RemoveSubscriberInternal(string topicName, string subscriberId);
-        IDictionary<string, IList<Queue>> Queues { get; }
+        Task PublishMessageInternal(string topicName, MessageModel message);
+        Task AddSubscriberInternal(string topicName, string subscriberId);
+        Task RemoveSubscriberInternal(string topicName, string subscriberId);
         void Dispose();
 
     }
