@@ -11,9 +11,7 @@ namespace MessageBrokerEngine.MessageBrokerCore.Common.Interfaces.Topics
         TopicStatus TopicStatus { get; }
         long TopicMessageCount { get; }
         TopicConfiguration Configuration { get; }
-        IEnumerable<string> GetSubscribers();
-        IEnumerable<string> GetPublishers();
-
+    
     }
     public enum TopicStatus
     {
