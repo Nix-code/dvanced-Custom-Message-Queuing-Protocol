@@ -1,6 +1,7 @@
 namespace MessageBrokerEngine.MessageBrokerCore.Models {
     using System;
     using System.Collections.Generic;
+    using MessageBrokerEngine.MessageBrokerCore.Common;
     using MessageBrokerEngine.MessageBrokerCore.Common.Interfaces.Topics;
 
     public class TopicModel : ITopic
@@ -21,16 +22,5 @@ namespace MessageBrokerEngine.MessageBrokerCore.Models {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<string> GetPublishers()
-        {
-            // Which publishers has published the message to this Topic
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<string> GetSubscribers()
-        {
-            // List of all the subscribers subscribing to this Topic
-            throw new NotImplementedException();
-        }
     }
 }
