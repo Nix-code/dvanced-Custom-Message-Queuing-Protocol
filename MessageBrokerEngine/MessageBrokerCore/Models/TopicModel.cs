@@ -2,6 +2,7 @@ namespace MessageBrokerEngine.MessageBrokerCore.Models {
     using System;
     using MessageBrokerEngine.MessageBrokerCore.Common;
     using MessageBrokerEngine.MessageBrokerCore.Common.Interfaces.Topics;
+    using MessageBrokerEngine.MessageBrokerCore.Subscriber;
 
     public class TopicModel : ITopic
     {
@@ -11,6 +12,26 @@ namespace MessageBrokerEngine.MessageBrokerCore.Models {
         public long TopicMessageCount { get; private set; }
         public TopicConfiguration Configuration { get; private set; }
         public string TopicName {get;}
+
+        private readonly List<Subscribers> _subscribers = new List<Subscribers>();
+        private readonly List<MessageModel> _messages = new List<MessageModel>();
+        public void Subscribe(Subscribers subscribe){
+            _subscribers.Add(subscribe);
+        }
+
+        public void PublishMessage(MessageModel message){
+
+            _messages.Add(message);
+            NotifySubscribers(message);
+            TopicMessageCount++;
+        }
+
+        private void NotifySubscribers(MessageModel message){
+
+            foreach(var subscriber in _subscribers){
+                subscriber.ReceiveMessage(message);
+            }
+        }
 
         public TopicModel(string topicName, TopicConfiguration config){
             TopicName = topicName;

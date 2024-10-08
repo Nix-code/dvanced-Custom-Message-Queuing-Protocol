@@ -6,5 +6,6 @@ namespace MessageBrokerEngine.MessageBrokerCore.Models{
         public DateTime TimeStamp { get; set; } = DateTime.UtcNow;
         public byte[]? OriginalMessageData { get; set; }
         public int? Priority { get; set; }
+
     }
 }
