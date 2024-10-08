@@ -1,6 +1,5 @@
 namespace MessageBrokerEngine.MessageBrokerCore.Models {
     using System;
-    using System.Collections.Generic;
     using MessageBrokerEngine.MessageBrokerCore.Common;
     using MessageBrokerEngine.MessageBrokerCore.Common.Interfaces.Topics;
 

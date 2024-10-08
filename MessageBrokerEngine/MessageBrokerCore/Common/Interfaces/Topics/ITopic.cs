@@ -1,7 +1,6 @@
 namespace MessageBrokerEngine.MessageBrokerCore.Common.Interfaces.Topics
 {
     using System;
-    using System.Collections.Generic;
 
     public interface ITopic : IDisposable
     {
