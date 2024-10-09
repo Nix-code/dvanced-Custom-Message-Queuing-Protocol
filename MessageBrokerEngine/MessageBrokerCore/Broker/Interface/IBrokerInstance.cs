@@ -6,11 +6,13 @@
 // Communication between all components is handled using TCP, with routing algorithms ensuring efficient message delivery.
 
 
+using MessageBrokerEngine.MessageBrokerCore.Models;
+
 namespace MessageBrokerEngine.MessageBrokerCore.Broker
 {
     public interface IBrokerInstance : IDisposable
     {
             
-
+        public void EnqueueMessage(MessageModel message, int  partition);
     }
 }
