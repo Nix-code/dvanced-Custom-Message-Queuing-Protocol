@@ -42,3 +42,4 @@ artifacts/
 *.msp
 *appsettings.Development.json
 *published
+/book 
